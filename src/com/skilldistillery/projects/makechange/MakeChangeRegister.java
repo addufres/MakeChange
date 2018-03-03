@@ -25,7 +25,7 @@
 //If the amount tendered is more than the cost of the item, display the number of bills and coins 
 //that should be given to the customer.
 
-package MakeChange;
+package com.skilldistillery.projects.makechange;
 
 import java.util.Scanner;
 
