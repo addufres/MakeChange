@@ -28,7 +28,7 @@ After that begin with the largest denomination i.e. twenties.
 									i.e. newChange = changeDue - (denomination * billOrCoin)
 									
 #### How To Run This Project
-Run this through the console in eclipse or the terminal by going to the proper directory and type ```java MakeChange```
+Run this through the console in eclipse or the terminal by going to the proper directory and type ```java MakeChangeRegister```
 
 
 #### Lessons Learned
@@ -37,3 +37,5 @@ I learned about how to eliminate possibilities and use the modulo '%' symbol to 
 I also incorporated an object class I wrote and created in the if/else statement for the static method in my MakeChange class.
 I am starting to be able to conceptualize a visual mental model of my program which has proven helpful in sorting through the logic 
 problems like this one.  
+I learned about the nuances of decimal places and converting from doubles to ints and the relationship between the two data types.
+I practiced reassigning values based off of an equation that does modulus without the '%' operand.
