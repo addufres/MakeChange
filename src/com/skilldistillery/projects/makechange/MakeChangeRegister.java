@@ -11,33 +11,20 @@ public class MakeChangeRegister {
 		double itemPrice, amountTendered;
 		System.out.print("Please enter the price of the item: $");
 		itemPrice = (input.nextDouble());
-		System.out.println();
 		System.out.print("Please enter the amount tendered: $");
 		amountTendered = (input.nextDouble());
 		if (itemPrice > amountTendered) {
 			System.err.println("Put item back...Not enough funds.");
 		} else if (itemPrice == amountTendered) {
-			System.out.println("The price was: $" + itemPrice + "\nYou tendered: $" + amountTendered
-					+ "\nThank you for exact change. Enjoy your purchase.");
+			System.out.println("The price was: $" + itemPrice + "\nYou tendered: $" + amountTendered + "\nThank you for exact change. Enjoy your purchase.");
 		} else {
 			itemPrice *= 100;
 			amountTendered *= 100;
 			int changeDue = ((int)((amountTendered - itemPrice)));
-			System.out.println( "     Your change is     \n" +  
-					            "________________________\n");
-			if (changeDue < 100 && changeDue >= 60) {
-				cfr.calculateBillsAndCoins(changeDue);
-			} else if (changeDue < 100 && changeDue < 60) {
-				cfr.calculateBillsAndCoins(changeDue);
-			} else {
-				int cents = (int) (changeDue % 100);
-				if (cents >= 60) {
-					cfr.calculateBillsAndCoins(changeDue);
-				} else {
-					cfr.calculateBillsAndCoins(changeDue);
-				}
+			System.out.println( "     Your change is     \n________________________\n");
+			cfr.calculateBillsAndCoins(changeDue);
 			}
-		}
 		input.close();
+		}
 	}
-}
+//}
