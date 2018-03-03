@@ -8,10 +8,10 @@ Program to calculate change.
 This program makes change out of the amount tendered for a product.
 It is an automatic program with everything past the user input handled by learned java techniques.
 It uses: 
-*Objects that I make to do the calculations away from my MakeChange class allowing for a cleaner code.
-*If/Else statements nested within each other helping to make decisions about the cents and dollars individually.
-*Taking input from a user through the user of the Scanner object.
-*I cast ints using (int) in order to go from x.00 dollar amount to x.
+* Objects that I make to do the calculations away from my MakeChange class allowing for a cleaner code.
+* If/Else statements nested within each other helping to make decisions about the cents and dollars individually.
+* Taking input from a user through the user of the Scanner object.
+* I cast ints using (int) in order to go from x.00 dollar amount to x.
 
 #### How To Run This Project
 Run this through the console in eclipse or the terminal
