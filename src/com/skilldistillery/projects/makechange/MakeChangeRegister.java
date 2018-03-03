@@ -33,9 +33,9 @@ public class MakeChangeRegister {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		CalculatorForRegister cfr = new CalculatorForRegister();
 		double  itemPrice, amountTendered;
-		int     twenties, tens, fives, singles;
-		int     quarters, dimes, nickels, pennies;
+		
 		System.out.print("Please enter the price of the item: $");
 		itemPrice = input.nextDouble();
 		System.out.println();
@@ -48,73 +48,20 @@ public class MakeChangeRegister {
 			System.out.println("The price was: $" + itemPrice + "\nYou tendered: $" + amountTendered
 					+ "\nThank you for exact change. Enjoy your purchase.");
 		} else {
-			double changeDue = (amountTendered - itemPrice) * 100;
+			double changeDue = Math.ceil((amountTendered - itemPrice) * 100);
 			System.out.println("Your change is:\n________________________\n");
-			
-			if(changeDue < 100) {
-				
-				int cents = (int)(changeDue % 100);
-				int dollars = 0;
-				
-				twenties = (int) (dollars / 20);
-				int tensFivesSingles = dollars - (twenties*20);
-				System.out.println("Twenties: " + twenties);
-				
-				tens = (int)(tensFivesSingles / 10);
-				int fivesSingles = tensFivesSingles - (tens*10);
-				System.out.println("Tens: " + tens);
-				
-				fives = (int)(fivesSingles / 5);
-				singles = fivesSingles - (fives*5);
-				System.out.println("Fives: " + fives + "\nSingles: " + singles);
-				
-				quarters = (int)(cents / 25);
-				double dimesNickelsPennies = cents - (quarters*25);
-				System.out.println("Quarters: " + quarters);
-				
-				dimes = (int)(dimesNickelsPennies / 10);
-				double nickelsPennies = dimesNickelsPennies - (dimes*10);
-				System.out.println("Dimes: " + dimes);
-				
-				nickels = (int)(nickelsPennies / 5);
-				pennies = (int)(nickelsPennies) - (nickels*5);
-				System.out.println("Nickels: " + nickels + "\nPennies:" + pennies);
-
+			if(changeDue < 100 && changeDue >= 60) {
+				cfr.lessThanADollarMoreThan60Cents(changeDue);
+			} else if(changeDue < 100 && changeDue < 60) {
+				cfr.lessThanADollarLessThan60Cents(changeDue);
 			} else {
-				
 				int cents = (int)(changeDue % 100);
-				System.out.println(cents);
-				int dollars = (int)(Math.floor((changeDue - cents)/100));
-				System.out.println(dollars);
-				
-				twenties = (int) (dollars / 20);
-				int tensFivesSingles = dollars - (twenties*20);
-				System.out.println("Twenties: " + twenties);
-				
-				tens = (int)(tensFivesSingles / 10);
-				int fivesSingles = tensFivesSingles - (tens*10);
-				System.out.println("Tens: " + tens);
-				
-				fives = (int)(fivesSingles / 5);
-				singles = fivesSingles - (fives*5);
-				System.out.println("Fives: " + fives + "\nSingles: " + singles);
-				
-				quarters = (int)(cents / 25);
-				double dimesNickelsPennies = cents - (quarters*25);
-				System.out.println("Quarters: " + quarters);
-				
-				dimes = (int)(dimesNickelsPennies / 10);
-				double nickelsPennies = dimesNickelsPennies - (dimes*10);
-				System.out.println("Dimes: " + dimes);
-				
-				nickels = (int)(nickelsPennies / 5);
-				pennies = (int)(nickelsPennies) - (nickels*5);
-				System.out.println("Nickels: " + nickels + "\nPennies:" + pennies);
-				
+				if(cents >= 60) {
+					cfr.MoreThanADollarMoreThan60Cents(changeDue, cents);
+				} else {
+					cfr.MoreThanADollarLessThan60Cents(changeDue, cents);			
+				}
 			}
 		}
-		input.close();
 	}
 }
-
-
