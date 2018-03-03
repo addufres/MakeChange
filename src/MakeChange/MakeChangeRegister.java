@@ -19,6 +19,8 @@
 //User Story #3
 //Display an appropriate message if the customer provided too little money or the exact amount.
 //
+// DONE
+//
 //User Story #4
 //If the amount tendered is more than the cost of the item, display the number of bills and coins 
 //that should be given to the customer.
@@ -31,19 +33,20 @@ public class MakeChangeRegister {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		
+
 		System.out.print("Please enter the price of the item: $");
 		double itemPrice = input.nextDouble();
 		System.out.println();
 		System.out.println("Please enter the amount tendered: ");
 		double amountTendered = input.nextDouble();
-		
-		if(itemPrice > amountTendered) {
+
+		if (itemPrice > amountTendered) {
 			System.out.println("Put item back...Not enough funds.");
+		} else if (itemPrice == amountTendered) {
+			System.out.println("The price was: $" + itemPrice + "\nYou tendered: $" + amountTendered
+					+ "\nThank you for exact change. Enjoy your purchase.");
 		}
-		
-		
+
 	}
 
 }
