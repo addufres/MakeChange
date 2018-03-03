@@ -10,7 +10,7 @@ It is an automatic program with everything past the user input handled by learne
 
 #### How To Run This Project
 Run this through the terminal by typing 
-``` java MakeChangeRegister ``
+``` java MakeChangeRegister ```
 
 #### Lessons Learned
 
