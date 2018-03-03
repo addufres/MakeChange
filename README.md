@@ -9,9 +9,27 @@ This program makes change out of the amount tendered for a product.
 It is an automatic program with everything past the user input handled by learned java techniques.
 It uses: 
 * Objects that I make to do the calculations away from my MakeChange class allowing for a cleaner code.
+** ```public class CalculatorForRegister {
+
+	public void lessThanADollarMoreThan60Cents(double changeDue) {
+	}
+
+	public void lessThanADollarLessThan60Cents(double changeDue) {
+	}
+
+	public void MoreThanADollarMoreThan60Cents(double changeDue, int cents) {
+	}
+
+	public void MoreThanADollarLessThan60Cents(double changeDue, int cents) {
+	}
+
+	public void printIfStatement(int twenties, int tens, int fives, int singles, int quarters, int dimes, int nickels, int pennies) {
+		}
+}```
 * If/Else statements nested within each other helping to make decisions about the cents and dollars individually.
 * Taking input from a user through the user of the Scanner object.
 * I cast ints using (int) in order to go from x.00 dollar amount to x.
+* Call methods with parameters and call methods from objects.
 
 #### How To Run This Project
 Run this through the console in eclipse or the terminal
