@@ -10,9 +10,9 @@ It is an automatic program with everything past the user input handled by learne
 
 It uses: 
 * Objects that I make to do the calculations away from my MakeChange class allowing for a cleaner code.
-** The object class holds two methods.
-*** One method to calculate the denominations of bills and coins. 
-*** The second method is called by the first and prints everything out.
+	* The object class holds two methods.
+	* One method to calculate the denominations of bills and coins. 
+	* The second method is called by the first and prints everything out.
 * If/Else statements nested within each other helping to make decisions about the cents and dollars individually.
 * Taking input from a user through the user of the Scanner object.
 * I cast ints using (int) in order to go from 'x.00' dollar amount to 'x00.00'. 
