@@ -24,8 +24,8 @@ After that begin with the largest denomination i.e. twenties.
 1. To find the number of bills, I divide changeDue by the denomination of the variable you use.							
 2. To find remaining number of pennies subtract the product of the denomination and bill from the original changeDue.  	
 3. To find each remaining bill and coin, continue plugging in the values replacing the bill 
-									i.e. billOrCoin  = changeDue / denomination
-									i.e. newChange = changeDue - (denomination * billOrCoin)
+	* i.e. billOrCoin  = changeDue / denomination
+	* i.e. newChange = changeDue - (denomination * billOrCoin)
 									
 #### How To Run This Project
 Run this through the console in eclipse or the terminal by going to the proper directory and type ```java MakeChangeRegister```
