@@ -1,4 +1,3 @@
-// TODO Denominations that are not used should not be displayed. DONE IN CalculatorForRegister.java ie cfr object
 package com.skilldistillery.projects.makechange;
 
 import java.util.Scanner;
@@ -27,4 +26,3 @@ public class MakeChangeRegister {
 		input.close();
 		}
 	}
-//}
